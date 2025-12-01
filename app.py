@@ -18,7 +18,7 @@ st.set_page_config(
 # Gemini API configuration
 # =========================================================
 # ⚠️ For safety, in real use put this in an env var or st.secrets
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")
+GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", "")
 os.environ["GEMINI_API_KEY"] = GEMINI_API_KEY
 
 try:
@@ -464,3 +464,4 @@ if analyze_text:
             st.rerun()
     else:
         st.warning("Please paste some prescription text before analyzing.")
+
