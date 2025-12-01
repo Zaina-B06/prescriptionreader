@@ -1,9 +1,10 @@
 import streamlit as st
-from google import genai
+import google.genai as genai
 from google.genai import types
 import os
 import json
 import re
+
 
 # =========================================================
 # Page config
@@ -464,4 +465,5 @@ if analyze_text:
             st.rerun()
     else:
         st.warning("Please paste some prescription text before analyzing.")
+
 
