@@ -347,7 +347,7 @@ if "predictions_raw" not in st.session_state:
 # ---------------------------
 # Header
 # ---------------------------
-st.markdown("<div class='card'><div class='h1'>🩺 Symptom → Top Conditions (Common-first)</div><div style='color:#475569'>It aims at easing the possible predcitions for you.</div></div>", unsafe_allow_html=True)
+st.markdown("<div class='card'><div class='h1'>🩺 Symptom → Top Conditions</div><div style='color:#475569'>It aims at easing the possible predcitions for you.</div></div>", unsafe_allow_html=True)
 
 # ---------------------------
 # Layout: left inputs, right results
@@ -457,7 +457,7 @@ with right_col:
 
         # render preds_final
         if preds_final:
-            st.markdown("#### Top predictions (common-first)")
+            st.markdown("#### Top predictions")
             for idx, p in enumerate(preds_final, start=1):
                 disease = p.get("disease", "Unknown")
                 prob = p.get("probability", 0.0)
